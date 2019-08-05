@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="hybrisTest" preserve-order="true" verbose="1" thread-count="3" parallel="tests">
+
+
+    <test name="MyTestDemo">
+        <classes>
+            <class name="com.sayid.testcases.MyTestChild"></class>
+            <class name="com.sayid.testcases.MyTestChild2"></class>
+        </classes>
+    </test>
+
+    <test name="MyTestDemo1">
+        <classes>
+            <class name="com.sayid.testcases.MyTest1Child1"></class>
+        </classes>
+    </test>
+
+    <!--报表监听器：reportng渲染报表用的-->
+    <listeners>
+        <listener class-name="com.sayid.listener.ScreenCaptureListener"></listener>
+        <listener class-name="com.sayid.listener.ExtentTestNGIReporterListener"></listener>
+    </listeners>
+</suite>
