@@ -103,6 +103,7 @@ public class ExtentTestNGIReporterListener implements IReporter {
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
         htmlReporter.config().setTheme(Theme.STANDARD);
         htmlReporter.config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
+        htmlReporter.config().setJS("$(document).ready(function() { eles = $(\".screenshots li img\"); for (ele of eles ) { var names = ele.getAttributeNames(); for(name of names) { if (name != \"width\") {var attri = ele.getAttribute(name); ele.setAttribute(name, attri.replace(/.+test-output\\/(?=img)/g,\"\"))} } } });");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         extent.setReportUsesManualConfiguration(true);
