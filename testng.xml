@@ -13,6 +13,7 @@
     <test name="MyTestDemo1">
         <classes>
             <class name="com.sayid.testcases.MyTest1Child1"></class>
+            <class name="com.sayid.testcases.MyScreenTest"></class>
         </classes>
     </test>
 
