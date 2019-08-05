@@ -9,7 +9,7 @@ import java.io.File;
 
 public class ScreenCapture {
 
-    private static Logger logger = Logger.getLogger(ScreenCaptureListener.class);
+    private static Logger logger = Logger.getLogger(ScreenCapture.class);
 
     public static void getScreen(TakesScreenshot driver, String filename) {
         try {
